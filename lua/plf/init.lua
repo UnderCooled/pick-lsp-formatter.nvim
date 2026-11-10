@@ -95,7 +95,7 @@ local function get_format_servers()
   end
 
   for _, client in ipairs(clients) do
-    if client.supports_method('textDocument/formatting') then
+    if client:supports_method('textDocument/formatting') then
       table.insert(servers, client.name)
     end
   end
